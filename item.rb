@@ -8,5 +8,15 @@ class Item
     @quality = quality
   end
 
+  def dec n
+    @quality = @quality - n
+    @quality = [0, @quality].max
+  end
+
+  def inc n
+    @quality = @quality + n
+    @quality = [50, @quality].min
+  end
+
 
 end
